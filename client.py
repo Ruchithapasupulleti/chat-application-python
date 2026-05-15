@@ -26,13 +26,13 @@ def receive():
             break
 # Send messages
 def write():
-       while True:
-            message = input("")
-            print("\033[A                             \033[A")
+    while True:
+        message = input("")
+        print("\033[A                             \033[A")
 
-            time = datetime.now().strftime("%H:%M")
-            full_msg = f"[{time}] {nickname}: {message}"
-            client.send(full_msg.encode('utf-8'))
+        time = datetime.now().strftime("%H:%M")
+        full_msg = f"[{time}] {nickname}: {message}"
+        client.send(full_msg.encode('utf-8'))
            
 threading.Thread(target=receive).start()
 threading.Thread(target=write).start()

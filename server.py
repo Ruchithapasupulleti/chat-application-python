@@ -34,7 +34,7 @@ def handle(client):
             break
 # Accept connections
 def receive():
-    print("Server running...")
+    print("Server running....")
 
     while True:
         client, address = server.accept()
