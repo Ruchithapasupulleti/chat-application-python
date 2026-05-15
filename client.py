@@ -33,6 +33,6 @@ def write():
         time = datetime.now().strftime("%H:%M")
         full_msg = f"[{time}] {nickname}: {message}"
         client.send(full_msg.encode('utf-8'))
-# testing git update
+        
 threading.Thread(target=receive).start()
 threading.Thread(target=write).start()
