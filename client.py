@@ -1,5 +1,6 @@
 import socket
 import threading
+from datetime import datetime
 
 host = '127.0.0.1'
 port = 5555
@@ -28,7 +29,9 @@ def receive():
 def write():
     while True:
         message = input("")
-        full_msg = f"{nickname}: {message}"
+
+        time = datetime.now().strftime("%H:%M")
+        full_msg = f"[{time}] {nickname}: {message}"
         client.send(full_msg.encode('utf-8'))
 
 threading.Thread(target=receive).start()
