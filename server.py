@@ -54,7 +54,3 @@ def receive():
         thread.start()
 
 receive()
-
- 
-
- 
