@@ -32,7 +32,7 @@ def handle(client):
             broadcast(f"{nickname} left the chat".encode('utf-8'))
             client.close()
             break
-
+#uhfgfuy
 # Accept connections
 def receive():
     print("Server running...")
